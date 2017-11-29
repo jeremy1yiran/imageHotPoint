@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="<%=basePath%>">
+    
+    <title>NBGISLite示例应用</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+	<style type="text/css" >
+		/*body{background:#FF0000;}*/
+		.leaflet-container {background:none;}/*清除背景*/
+		#map,body,html{margin:0px;width:480px;height:270px;}
+	</style>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/leaflet.js"></script>
+	<script src="js/nbgis.mini.js"></script>
+	<script src="js/Toolbar.js"></script>
+	<script src="js/drawImmovable.js"></script>
+  </head>
+  
+  <body>
+    <div id="map"></div>
+    <div style="display: none;">
+    	<div id="toolbar" style="margin-left: 80px;margin-top:-40px;">
+		    	<input type="button" value="绘制点" onclick="setDrawMapPointTool()" />
+		    	<input type="button" value="绘制线" onclick="setDrawPolylineTool()" />
+		    	<input type="button" value="绘制面(推荐使用)" onclick="setDrawPolygonTool()" />
+		    	<input type="button" value="绘制矩形" onclick="setDrawRectTool()" />
+		    	<input type="button" value="绘制圆" onclick="setDrawCircleTool()" />
+		    	<input type="button" value="停止绘制" onclick="stop()" />
+	    </div>
+    </div>    
+  </body>
+</html>
